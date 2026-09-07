@@ -4,6 +4,12 @@ This repository contains an industrial engineering project studying GDOT Project
 
 The work is written as an exploratory, evidence-backed student project. It uses GDOT planning documents, OpenStreetMap corridor geometry, and a custom aggregate queue simulation to compare four-lane signal operations against six-lane widening scenarios. The model is intentionally transparent and reproducible, with assumptions stated directly in the report.
 
+## Interactive Website
+
+Explore the traffic study in the [Old Milton Traffic Lab](https://old-milton-traffic-lab.open-siren-5832.chatgpt.site). Adjust road design, signal timing, and peak-hour demand; replay queues; compare alternatives; and inspect the tree and cost evidence.
+
+Website source and setup instructions are in [website/](website/). The browser model reproduces all 280 published Python runs. It uses historical forecasts and assumed operations, not live traffic. Hosted access is currently limited to the owner.
+
 ## Main Deliverables
 
 - `outputs/traffic_simulation_study.pdf` - final simulation report
