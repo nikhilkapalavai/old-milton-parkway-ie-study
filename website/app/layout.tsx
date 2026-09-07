@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  icons: { icon: '/favicon.svg' },
   title: 'Old Milton Traffic Lab — Nikhil Kapalavai',
   description:
     'Explore traffic, signal timing, and median-tree tradeoffs on Old Milton Parkway. An interactive industrial engineering study by Nikhil Kapalavai.',

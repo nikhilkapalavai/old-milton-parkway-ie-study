@@ -41,7 +41,9 @@ Map data © OpenStreetMap contributors, under the Open Database License: https:/
 
 The browser implementation matches all 280 original Python runs within numerical tolerance for main/side/all-trip delay, peak main-road queue, remaining traffic at minute 60, and clearance time. Additional checks cover inside/outside equivalence, 20% demand scaling, invalid inputs, and vehicle conservation/storage at slider boundary combinations. These are software checks, not validation against real traffic.
 
-The interface includes optional feature-detected WebMCP tools, `run_traffic_scenario` and `read_traffic_results`. They use the same state and calculation as the page. The available browser-control API did not provide a supported WebMCP execution context, so these optional tools were not verified through a browser registry. Normal page controls do not depend on WebMCP. Browser UI testing was not requested or performed.
+The interface includes optional feature-detected WebMCP tools, `run_traffic_scenario` and `read_traffic_results`. They use the same state and calculation as the page. A follow-up browser check verified their registration, completed scenarios, read-back results, and rejection of an invalid green-time input. Normal page controls do not depend on WebMCP.
+
+A production-preview browser regression check reproduces the published build: the page initializes its simulation worker, the four-lane signals-plus-20%-reduction scenario produces 0.70725 minutes of main-road delay, and clicking the visible six-lane preset recalculates it to 0.99921 minutes. The worker URL is resolved from the emitted Vite asset against the page URL; it must never use a rewritten `file:///` base from `import.meta.url`.
 
 ## Deployment
 

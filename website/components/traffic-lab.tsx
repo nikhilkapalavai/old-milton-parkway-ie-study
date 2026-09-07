@@ -37,6 +37,7 @@ import {
 } from '@/lib/simulation';
 import { Corridor, QueueChart } from './corridor';
 import { TreesAndTradeoffs, ModelNotes, GITHUB } from './study-notes';
+import simulationWorkerUrl from '../lib/simulation.worker.ts?worker&url';
 type ToolContext = {
   registerTool: (
     tool: {
@@ -197,10 +198,20 @@ export default function TrafficLab() {
     }));
   };
   useEffect(() => {
-    const w = new Worker(
-      new URL('../lib/simulation.worker.ts', import.meta.url),
-      { type: 'module' },
-    );
+    let w: Worker;
+    try {
+      // Vinext can rewrite import.meta.url to file:/// in client bundles.
+      // Resolve Vite's emitted asset URL against the actual page origin.
+      w = new Worker(new URL(simulationWorkerUrl, window.location.href), {
+        type: 'module',
+      });
+    } catch {
+      setPending(false);
+      setError(
+        'The traffic model could not start. Reload the page to try again.',
+      );
+      return;
+    }
     worker.current = w;
     w.onmessage = ({ data }) => {
       if (data.id !== sequence.current) return;
@@ -228,6 +239,7 @@ export default function TrafficLab() {
     };
   }, []);
   useEffect(() => {
+    if (!worker.current) return;
     setPending(true);
     setError('');
     const id = ++sequence.current;
@@ -633,8 +645,8 @@ export default function TrafficLab() {
                 {error && (
                   <div className="error-panel" role="alert">
                     <p>{error}</p>
-                    <button onClick={() => setSettings((s) => ({ ...s }))}>
-                      Retry calculation
+                    <button onClick={() => window.location.reload()}>
+                      Reload the model
                     </button>
                   </div>
                 )}
