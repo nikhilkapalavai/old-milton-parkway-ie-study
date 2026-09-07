@@ -6,7 +6,7 @@ The work is written as an exploratory, evidence-backed student project. It uses 
 
 ## Interactive Website
 
-Explore the traffic study in the [Old Milton Traffic Lab](https://old-milton-traffic-lab.open-siren-5832.chatgpt.site). Adjust road design, signal timing, and peak-hour demand; replay queues; compare alternatives; and inspect the tree and cost evidence.
+Explore the traffic study in the [Old Milton Traffic Lab](https://old-milton-traffic-lab.nick98976.chatgpt.site). Adjust road design, signal timing, and peak-hour demand; replay queues; compare alternatives; and inspect the tree and cost evidence.
 
 Website source and setup instructions are in [website/](website/). The browser model reproduces all 280 published Python runs. It uses historical forecasts and assumed operations, not live traffic. Hosted access is currently limited to the owner.
 
@@ -38,3 +38,4 @@ The simulation outputs are already included in `outputs/simulation/results.json`
 The project does not use Google live traffic data. Google Maps does not provide historical or live traffic volumes through this workspace, so the reproducible model uses GDOT published forecasts and OpenStreetMap geometry. The report names this limitation directly.
 
 OpenStreetMap data is credited to OpenStreetMap contributors under the Open Database License: https://www.openstreetmap.org/copyright
+
