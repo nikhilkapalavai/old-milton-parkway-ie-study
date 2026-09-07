@@ -32,7 +32,3 @@ The simulation outputs are already included in `outputs/simulation/results.json`
 The project does not use Google live traffic data. Google Maps does not provide historical or live traffic volumes through this workspace, so the reproducible model uses GDOT published forecasts and OpenStreetMap geometry. The report names this limitation directly.
 
 OpenStreetMap data is credited to OpenStreetMap contributors under the Open Database License: https://www.openstreetmap.org/copyright
-
-## Academic Integrity Note
-
-This repository is intended to document the student's project process and evidence. The final resume or college application language should describe the project honestly as a student-led industrial engineering study supported by transparent modeling and source review.
