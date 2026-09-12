@@ -8,6 +8,8 @@ The work is written as an exploratory, evidence-backed student project. It uses 
 
 **September 11 validation update:** Read the [evidence and model audit](outputs/validation/README.md) before citing results. It documents project-caused county water relocation, a corrected State Bridge Way signal location, two days of public lane counts, and 315 sensitivity runs. Count-unit processing remains unresolved; these runs are not field calibration. The earlier claim that retiming matched widening is not a supported real-world conclusion. The original simulation, PDF and website remain on the earlier V2 version.
 
+**September 12 decision review:** [Was the canopy worth losing?](outputs/canopy_value/README.md) aggregates delay across modeled trips, values time using USDOT parameters, and calculates the canopy/cost break-even thresholds. Widening's time benefit is potentially substantial, but the missing canopy appraisal and comparable four-lane cost prevent a definitive verdict. This is an illustrative economic screen, not a full benefit-cost analysis.
+
 ## Interactive Website
 
 Explore the traffic study in the [Old Milton Traffic Lab](https://old-milton-traffic-lab.nick98976.chatgpt.site). Adjust road design, signal timing, and peak-hour demand; replay queues; compare alternatives; and inspect the tree and cost evidence.
@@ -15,6 +17,8 @@ Explore the traffic study in the [Old Milton Traffic Lab](https://old-milton-tra
 Website source and setup instructions are in [website/](website/). The browser model reproduces all 280 published Python runs. It uses historical forecasts and assumed operations, not live traffic. Hosted access is currently limited to the owner.
 
 ## Main Deliverables
+
+- `outputs/canopy_value/` - decision review, aggregate delay valuation and reproducible break-even analysis
 
 - `outputs/canopy_tradeoff/` - latest traffic-only study, competing delay objectives, capacity bounds and complete experiment outputs
 - `outputs/validation/` - latest evidence audit, corrected geometry and reproducible sensitivity tests

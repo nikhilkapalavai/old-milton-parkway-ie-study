@@ -1,0 +1,1157 @@
+{
+  "question": "Was the Old Milton median canopy worth losing?",
+  "finding": "Undetermined by available evidence. Traffic benefits can be substantial; an actual canopy appraisal and comparable four-lane alternative cost are missing. Neither definite yes nor definite no is established.",
+  "assumptions": {
+    "equivalent_weekdays_per_year": 250,
+    "value_per_person_hour_2024_usd": 21.8,
+    "occupancy_reference": 1.34,
+    "occupancy_sensitivity": [
+      1.0,
+      1.34,
+      1.41
+    ],
+    "personal_time_value_sensitivity_2024_usd": 20.1,
+    "years_reference": 20,
+    "real_discount_rate_reference": 0.07,
+    "equivalent_weekdays_sensitivity": [
+      200,
+      250,
+      260
+    ],
+    "horizons_sensitivity": [
+      10,
+      20,
+      30
+    ],
+    "real_discount_rates_sensitivity": [
+      0.03,
+      0.07
+    ],
+    "incremental_net_resource_cost_pv_scenarios_2024_usd": [
+      0,
+      5000000.0,
+      10000000.0,
+      15000000.0,
+      20000000.0
+    ],
+    "tree_inventory": null,
+    "canopy_loss_value": null,
+    "incremental_actual_four_to_six_lane_cost": null,
+    "growth_forecast": null,
+    "interpretation": "250 identical modeled weekdays per year and unchanged delay benefits are illustrative assumptions, not measured annual performance or a demand forecast. 1.34 is a weekday-peak occupancy reference; the modeled windows also contain off-peak hours, so 1.41 is tested separately. All vehicles are provisionally valued as passenger vehicles. No freight, safety, emissions, reliability, construction disruption or nonmodeled-hour benefits are credited here."
+  },
+  "sources": {
+    "USDOT_2026_BCA": {
+      "url": "https://www.transportation.gov/sites/dot.gov/files/2025-12/Benefit%20Cost%20Analysis%20Guidance%202026%20Update%20(Final).pdf",
+      "pages_one_based": [
+        13,
+        40,
+        41
+      ],
+      "use": "2024 USD/person-hour: personal 20.10, all purposes 21.80. Passenger occupancy: weekday peak 1.34, weekday off-peak 1.41. Real discount rate 7%. We use an opening-relative sensitivity calculation, not USDOT's full dated grant BCA procedure."
+    },
+    "GDOT_concept": {
+      "url": "https://www.dot.ga.gov/_layouts/GDOT.SharePoint.CustomHttpHandlers/PWDocumentDownloadHandler.ashx?DocGUID=11d2e65d-2e90-4a1a-a0a8-e75ae818d78f&Filename=0017187_CR_MAR2022.pdf",
+      "pages_one_based": [
+        13,
+        14
+      ],
+      "local_excerpt": "../evidence_excerpt.pdf, excerpt pages 8 and 9",
+      "use": "Historical concept cost estimates and alternatives; operations-and-safety B/C ratio 2.98 is reported by GDOT, not independently reproduced here."
+    },
+    "iTree_requirements": {
+      "url": "https://www.itreetools.org/faqs_home",
+      "use": "Individual tree benefits require location, species and diameter; size/health and replacement growth affect benefits over time. No corridor inventory was located in the records reviewed."
+    }
+  },
+  "input_hashes_lf": {
+    "results.json": "4c96cba1688a9d4fc10b4169fb1fba12752eaa0042845278e7ffc662dbd07d07",
+    "tradeoffs.json": "a7b98bdc939b6c6277e0fe0b432c91e0ed14b7740e11ccbf21d3a3819ecf9fbb"
+  },
+  "comparisons": {
+    "balanced_four_lane": {
+      "periods": {
+        "AM": {
+          "main_entering_model_trips": 13999.675257731775,
+          "synthetic_side_trips": 12600.000000000658,
+          "main_vehicle_hours_saved_by_six_lanes": 31.641487225874666,
+          "side_vehicle_hours_saved_by_six_lanes": 57.724338433313065,
+          "total_vehicle_hours_saved_by_six_lanes": 89.36582565918772
+        },
+        "PM": {
+          "main_entering_model_trips": 25960.506329114203,
+          "synthetic_side_trips": 18900.00000000191,
+          "main_vehicle_hours_saved_by_six_lanes": 37.14474045427849,
+          "side_vehicle_hours_saved_by_six_lanes": 86.6429914609195,
+          "total_vehicle_hours_saved_by_six_lanes": 123.78773191519788
+        }
+      },
+      "total_vehicle_hours_saved_per_modeled_day": 213.15355757438562,
+      "synthetic_side_street_share": 0.677292612598557,
+      "annual_time_value_reference_2024_usd": 1556660.4309657384,
+      "twenty_year_time_value_pv_at_opening_2024_usd": 16491282.78108235,
+      "maximum_canopy_loss_pv_for_time_only_break_even": [
+        {
+          "incremental_net_resource_cost_pv_2024_usd": 0,
+          "canopy_loss_budget_pv_2024_usd": 16491282.78108235
+        },
+        {
+          "incremental_net_resource_cost_pv_2024_usd": 5000000.0,
+          "canopy_loss_budget_pv_2024_usd": 11491282.78108235
+        },
+        {
+          "incremental_net_resource_cost_pv_2024_usd": 10000000.0,
+          "canopy_loss_budget_pv_2024_usd": 6491282.781082351
+        },
+        {
+          "incremental_net_resource_cost_pv_2024_usd": 15000000.0,
+          "canopy_loss_budget_pv_2024_usd": 1491282.7810823508
+        },
+        {
+          "incremental_net_resource_cost_pv_2024_usd": 20000000.0,
+          "canopy_loss_budget_pv_2024_usd": -3508717.2189176492
+        }
+      ]
+    },
+    "minimum_all_trip_delay_four_lane": {
+      "periods": {
+        "AM": {
+          "main_entering_model_trips": 13999.675257731775,
+          "synthetic_side_trips": 12600.000000000658,
+          "main_vehicle_hours_saved_by_six_lanes": -27.44136204688798,
+          "side_vehicle_hours_saved_by_six_lanes": 109.49112626411394,
+          "total_vehicle_hours_saved_by_six_lanes": 82.0497642172259
+        },
+        "PM": {
+          "main_entering_model_trips": 25960.506329114203,
+          "synthetic_side_trips": 18900.00000000191,
+          "main_vehicle_hours_saved_by_six_lanes": -58.961906472181155,
+          "side_vehicle_hours_saved_by_six_lanes": 164.25639936106876,
+          "total_vehicle_hours_saved_by_six_lanes": 105.29449288888756
+        }
+      },
+      "total_vehicle_hours_saved_per_modeled_day": 187.34425710611345,
+      "synthetic_side_street_share": 1.4612005185199226,
+      "annual_time_value_reference_2024_usd": 1368175.1096459466,
+      "twenty_year_time_value_pv_at_opening_2024_usd": 14494466.601949789,
+      "maximum_canopy_loss_pv_for_time_only_break_even": [
+        {
+          "incremental_net_resource_cost_pv_2024_usd": 0,
+          "canopy_loss_budget_pv_2024_usd": 14494466.601949789
+        },
+        {
+          "incremental_net_resource_cost_pv_2024_usd": 5000000.0,
+          "canopy_loss_budget_pv_2024_usd": 9494466.601949789
+        },
+        {
+          "incremental_net_resource_cost_pv_2024_usd": 10000000.0,
+          "canopy_loss_budget_pv_2024_usd": 4494466.601949789
+        },
+        {
+          "incremental_net_resource_cost_pv_2024_usd": 15000000.0,
+          "canopy_loss_budget_pv_2024_usd": -505533.39805021137
+        },
+        {
+          "incremental_net_resource_cost_pv_2024_usd": 20000000.0,
+          "canopy_loss_budget_pv_2024_usd": -5505533.398050211
+        }
+      ]
+    }
+  },
+  "sensitivity_scenarios_not_confidence_intervals": [
+    {
+      "days": 200,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 10,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 856877.3014490303,
+      "time_value_pv_at_opening_2024_usd": 7309337.187589334
+    },
+    {
+      "days": 200,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 10,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 856877.3014490303,
+      "time_value_pv_at_opening_2024_usd": 6018347.597301548
+    },
+    {
+      "days": 200,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 20,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 856877.3014490303,
+      "time_value_pv_at_opening_2024_usd": 12748170.5108029
+    },
+    {
+      "days": 200,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 20,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 856877.3014490303,
+      "time_value_pv_at_opening_2024_usd": 9077770.33821047
+    },
+    {
+      "days": 200,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 30,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 856877.3014490303,
+      "time_value_pv_at_opening_2024_usd": 16795173.290743645
+    },
+    {
+      "days": 200,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 30,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 856877.3014490303,
+      "time_value_pv_at_opening_2024_usd": 10633025.722892376
+    },
+    {
+      "days": 200,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 10,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 929349.5110243214,
+      "time_value_pv_at_opening_2024_usd": 7927539.835295895
+    },
+    {
+      "days": 200,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 10,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 929349.5110243214,
+      "time_value_pv_at_opening_2024_usd": 6527362.070705162
+    },
+    {
+      "days": 200,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 20,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 929349.5110243214,
+      "time_value_pv_at_opening_2024_usd": 13826373.986840958
+    },
+    {
+      "days": 200,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 20,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 929349.5110243214,
+      "time_value_pv_at_opening_2024_usd": 9845541.958855135
+    },
+    {
+      "days": 200,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 30,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 929349.5110243214,
+      "time_value_pv_at_opening_2024_usd": 18215660.58399062
+    },
+    {
+      "days": 200,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 30,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 929349.5110243214,
+      "time_value_pv_at_opening_2024_usd": 11532336.356171831
+    },
+    {
+      "days": 200,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 10,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1148215.5839417006,
+      "time_value_pv_at_opening_2024_usd": 9794511.83136971
+    },
+    {
+      "days": 200,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 10,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1148215.5839417006,
+      "time_value_pv_at_opening_2024_usd": 8064585.780384075
+    },
+    {
+      "days": 200,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 20,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1148215.5839417006,
+      "time_value_pv_at_opening_2024_usd": 17082548.48447589
+    },
+    {
+      "days": 200,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 20,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1148215.5839417006,
+      "time_value_pv_at_opening_2024_usd": 12164212.253202029
+    },
+    {
+      "days": 200,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 30,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1148215.5839417006,
+      "time_value_pv_at_opening_2024_usd": 22505532.209596485
+    },
+    {
+      "days": 200,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 30,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1148215.5839417006,
+      "time_value_pv_at_opening_2024_usd": 14248254.468675785
+    },
+    {
+      "days": 200,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 10,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1245328.3447725908,
+      "time_value_pv_at_opening_2024_usd": 10622903.3792965
+    },
+    {
+      "days": 200,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 10,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1245328.3447725908,
+      "time_value_pv_at_opening_2024_usd": 8746665.174744917
+    },
+    {
+      "days": 200,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 20,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1245328.3447725908,
+      "time_value_pv_at_opening_2024_usd": 18527341.142366882
+    },
+    {
+      "days": 200,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 20,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1245328.3447725908,
+      "time_value_pv_at_opening_2024_usd": 13193026.224865882
+    },
+    {
+      "days": 200,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 30,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1245328.3447725908,
+      "time_value_pv_at_opening_2024_usd": 24408985.18254743
+    },
+    {
+      "days": 200,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 30,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1245328.3447725908,
+      "time_value_pv_at_opening_2024_usd": 15453330.717270255
+    },
+    {
+      "days": 200,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 10,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1208196.9950431327,
+      "time_value_pv_at_opening_2024_usd": 10306165.434500962
+    },
+    {
+      "days": 200,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 10,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1208196.9950431327,
+      "time_value_pv_at_opening_2024_usd": 8485870.112195183
+    },
+    {
+      "days": 200,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 20,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1208196.9950431327,
+      "time_value_pv_at_opening_2024_usd": 17974920.42023209
+    },
+    {
+      "days": 200,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 20,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1208196.9950431327,
+      "time_value_pv_at_opening_2024_usd": 12799656.176876761
+    },
+    {
+      "days": 200,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 30,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1208196.9950431327,
+      "time_value_pv_at_opening_2024_usd": 23681194.33994854
+    },
+    {
+      "days": 200,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 30,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1208196.9950431327,
+      "time_value_pv_at_opening_2024_usd": 14992566.26927825
+    },
+    {
+      "days": 200,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 10,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1310382.8105442931,
+      "time_value_pv_at_opening_2024_usd": 11177831.167767212
+    },
+    {
+      "days": 200,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 10,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1310382.8105442931,
+      "time_value_pv_at_opening_2024_usd": 9203580.519694278
+    },
+    {
+      "days": 200,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 20,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1310382.8105442931,
+      "time_value_pv_at_opening_2024_usd": 19495187.32144575
+    },
+    {
+      "days": 200,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 20,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1310382.8105442931,
+      "time_value_pv_at_opening_2024_usd": 13882214.16198574
+    },
+    {
+      "days": 200,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 30,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1310382.8105442931,
+      "time_value_pv_at_opening_2024_usd": 25684081.423426773
+    },
+    {
+      "days": 200,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 30,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1310382.8105442931,
+      "time_value_pv_at_opening_2024_usd": 16260594.262202282
+    },
+    {
+      "days": 250,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 10,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1071096.6268112878,
+      "time_value_pv_at_opening_2024_usd": 9136671.484486667
+    },
+    {
+      "days": 250,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 10,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1071096.6268112878,
+      "time_value_pv_at_opening_2024_usd": 7522934.496626935
+    },
+    {
+      "days": 250,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 20,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1071096.6268112878,
+      "time_value_pv_at_opening_2024_usd": 15935213.138503624
+    },
+    {
+      "days": 250,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 20,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1071096.6268112878,
+      "time_value_pv_at_opening_2024_usd": 11347212.922763085
+    },
+    {
+      "days": 250,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 30,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1071096.6268112878,
+      "time_value_pv_at_opening_2024_usd": 20993966.613429558
+    },
+    {
+      "days": 250,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 30,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1071096.6268112878,
+      "time_value_pv_at_opening_2024_usd": 13291282.15361547
+    },
+    {
+      "days": 250,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 10,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1161686.8887804016,
+      "time_value_pv_at_opening_2024_usd": 9909424.794119867
+    },
+    {
+      "days": 250,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 10,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1161686.8887804016,
+      "time_value_pv_at_opening_2024_usd": 8159202.588381451
+    },
+    {
+      "days": 250,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 20,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1161686.8887804016,
+      "time_value_pv_at_opening_2024_usd": 17282967.483551193
+    },
+    {
+      "days": 250,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 20,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1161686.8887804016,
+      "time_value_pv_at_opening_2024_usd": 12306927.448568916
+    },
+    {
+      "days": 250,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 30,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1161686.8887804016,
+      "time_value_pv_at_opening_2024_usd": 22769575.72998827
+    },
+    {
+      "days": 250,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 30,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1161686.8887804016,
+      "time_value_pv_at_opening_2024_usd": 14415420.445214786
+    },
+    {
+      "days": 250,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 10,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1435269.4799271259,
+      "time_value_pv_at_opening_2024_usd": 12243139.789212137
+    },
+    {
+      "days": 250,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 10,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1435269.4799271259,
+      "time_value_pv_at_opening_2024_usd": 10080732.225480095
+    },
+    {
+      "days": 250,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 20,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1435269.4799271259,
+      "time_value_pv_at_opening_2024_usd": 21353185.60559486
+    },
+    {
+      "days": 250,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 20,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1435269.4799271259,
+      "time_value_pv_at_opening_2024_usd": 15205265.316502536
+    },
+    {
+      "days": 250,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 30,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1435269.4799271259,
+      "time_value_pv_at_opening_2024_usd": 28131915.261995606
+    },
+    {
+      "days": 250,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 30,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1435269.4799271259,
+      "time_value_pv_at_opening_2024_usd": 17810318.085844733
+    },
+    {
+      "days": 250,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 10,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1556660.4309657384,
+      "time_value_pv_at_opening_2024_usd": 13278629.224120624
+    },
+    {
+      "days": 250,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 10,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1556660.4309657384,
+      "time_value_pv_at_opening_2024_usd": 10933331.468431147
+    },
+    {
+      "days": 250,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 20,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1556660.4309657384,
+      "time_value_pv_at_opening_2024_usd": 23159176.427958604
+    },
+    {
+      "days": 250,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 20,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1556660.4309657384,
+      "time_value_pv_at_opening_2024_usd": 16491282.78108235
+    },
+    {
+      "days": 250,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 30,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1556660.4309657384,
+      "time_value_pv_at_opening_2024_usd": 30511231.47818429
+    },
+    {
+      "days": 250,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 30,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1556660.4309657384,
+      "time_value_pv_at_opening_2024_usd": 19316663.396587815
+    },
+    {
+      "days": 250,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 10,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1510246.2438039156,
+      "time_value_pv_at_opening_2024_usd": 12882706.7931262
+    },
+    {
+      "days": 250,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 10,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1510246.2438039156,
+      "time_value_pv_at_opening_2024_usd": 10607337.640243977
+    },
+    {
+      "days": 250,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 20,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1510246.2438039156,
+      "time_value_pv_at_opening_2024_usd": 22468650.525290105
+    },
+    {
+      "days": 250,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 20,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1510246.2438039156,
+      "time_value_pv_at_opening_2024_usd": 15999570.221095948
+    },
+    {
+      "days": 250,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 30,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1510246.2438039156,
+      "time_value_pv_at_opening_2024_usd": 29601492.92493567
+    },
+    {
+      "days": 250,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 30,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1510246.2438039156,
+      "time_value_pv_at_opening_2024_usd": 18740707.836597808
+    },
+    {
+      "days": 250,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 10,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1637978.513180366,
+      "time_value_pv_at_opening_2024_usd": 13972288.959709011
+    },
+    {
+      "days": 250,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 10,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1637978.513180366,
+      "time_value_pv_at_opening_2024_usd": 11504475.649617845
+    },
+    {
+      "days": 250,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 20,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1637978.513180366,
+      "time_value_pv_at_opening_2024_usd": 24368984.151807178
+    },
+    {
+      "days": 250,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 20,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1637978.513180366,
+      "time_value_pv_at_opening_2024_usd": 17352767.70248217
+    },
+    {
+      "days": 250,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 30,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1637978.513180366,
+      "time_value_pv_at_opening_2024_usd": 32105101.77928346
+    },
+    {
+      "days": 250,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 30,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1637978.513180366,
+      "time_value_pv_at_opening_2024_usd": 20325742.827752847
+    },
+    {
+      "days": 260,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 10,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1113940.4918837394,
+      "time_value_pv_at_opening_2024_usd": 9502138.343866136
+    },
+    {
+      "days": 260,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 10,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1113940.4918837394,
+      "time_value_pv_at_opening_2024_usd": 7823851.876492012
+    },
+    {
+      "days": 260,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 20,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1113940.4918837394,
+      "time_value_pv_at_opening_2024_usd": 16572621.664043771
+    },
+    {
+      "days": 260,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 20,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1113940.4918837394,
+      "time_value_pv_at_opening_2024_usd": 11801101.43967361
+    },
+    {
+      "days": 260,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 30,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1113940.4918837394,
+      "time_value_pv_at_opening_2024_usd": 21833725.277966738
+    },
+    {
+      "days": 260,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 30,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1113940.4918837394,
+      "time_value_pv_at_opening_2024_usd": 13822933.439760089
+    },
+    {
+      "days": 260,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 10,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1208154.3643316177,
+      "time_value_pv_at_opening_2024_usd": 10305801.785884663
+    },
+    {
+      "days": 260,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 10,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1208154.3643316177,
+      "time_value_pv_at_opening_2024_usd": 8485570.69191671
+    },
+    {
+      "days": 260,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 20,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1208154.3643316177,
+      "time_value_pv_at_opening_2024_usd": 17974286.182893243
+    },
+    {
+      "days": 260,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 20,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1208154.3643316177,
+      "time_value_pv_at_opening_2024_usd": 12799204.546511674
+    },
+    {
+      "days": 260,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 30,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1208154.3643316177,
+      "time_value_pv_at_opening_2024_usd": 23680358.759187803
+    },
+    {
+      "days": 260,
+      "occupancy": 1.0,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 30,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1208154.3643316177,
+      "time_value_pv_at_opening_2024_usd": 14992037.263023378
+    },
+    {
+      "days": 260,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 10,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1492680.2591242108,
+      "time_value_pv_at_opening_2024_usd": 12732865.38078062
+    },
+    {
+      "days": 260,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 10,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1492680.2591242108,
+      "time_value_pv_at_opening_2024_usd": 10483961.514499297
+    },
+    {
+      "days": 260,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 20,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1492680.2591242108,
+      "time_value_pv_at_opening_2024_usd": 22207313.029818654
+    },
+    {
+      "days": 260,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 20,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1492680.2591242108,
+      "time_value_pv_at_opening_2024_usd": 15813475.929162636
+    },
+    {
+      "days": 260,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 30,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1492680.2591242108,
+      "time_value_pv_at_opening_2024_usd": 29257191.87247543
+    },
+    {
+      "days": 260,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 30,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1492680.2591242108,
+      "time_value_pv_at_opening_2024_usd": 18522730.809278518
+    },
+    {
+      "days": 260,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 10,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1618926.848204368,
+      "time_value_pv_at_opening_2024_usd": 13809774.39308545
+    },
+    {
+      "days": 260,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 10,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1618926.848204368,
+      "time_value_pv_at_opening_2024_usd": 11370664.727168392
+    },
+    {
+      "days": 260,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 20,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1618926.848204368,
+      "time_value_pv_at_opening_2024_usd": 24085543.48507695
+    },
+    {
+      "days": 260,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 20,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1618926.848204368,
+      "time_value_pv_at_opening_2024_usd": 17150934.092325646
+    },
+    {
+      "days": 260,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 30,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1618926.848204368,
+      "time_value_pv_at_opening_2024_usd": 31731680.73731166
+    },
+    {
+      "days": 260,
+      "occupancy": 1.34,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 30,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1618926.848204368,
+      "time_value_pv_at_opening_2024_usd": 20089329.93245133
+    },
+    {
+      "days": 260,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 10,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1570656.0935560723,
+      "time_value_pv_at_opening_2024_usd": 13398015.064851249
+    },
+    {
+      "days": 260,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 10,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1570656.0935560723,
+      "time_value_pv_at_opening_2024_usd": 11031631.145853737
+    },
+    {
+      "days": 260,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 20,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1570656.0935560723,
+      "time_value_pv_at_opening_2024_usd": 23367396.546301715
+    },
+    {
+      "days": 260,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 20,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1570656.0935560723,
+      "time_value_pv_at_opening_2024_usd": 16639553.029939787
+    },
+    {
+      "days": 260,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 30,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1570656.0935560723,
+      "time_value_pv_at_opening_2024_usd": 30785552.6419331
+    },
+    {
+      "days": 260,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 20.1,
+      "years": 30,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1570656.0935560723,
+      "time_value_pv_at_opening_2024_usd": 19490336.150061723
+    },
+    {
+      "days": 260,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 10,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1703497.6537075809,
+      "time_value_pv_at_opening_2024_usd": 14531180.518097375
+    },
+    {
+      "days": 260,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 10,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1703497.6537075809,
+      "time_value_pv_at_opening_2024_usd": 11964654.675602559
+    },
+    {
+      "days": 260,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 20,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1703497.6537075809,
+      "time_value_pv_at_opening_2024_usd": 25343743.51787947
+    },
+    {
+      "days": 260,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 20,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1703497.6537075809,
+      "time_value_pv_at_opening_2024_usd": 18046878.41058146
+    },
+    {
+      "days": 260,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 30,
+      "real_discount_rate": 0.03,
+      "annual_time_value_2024_usd": 1703497.6537075809,
+      "time_value_pv_at_opening_2024_usd": 33389305.8504548
+    },
+    {
+      "days": 260,
+      "occupancy": 1.41,
+      "value_per_person_hour_2024_usd": 21.8,
+      "years": 30,
+      "real_discount_rate": 0.07,
+      "annual_time_value_2024_usd": 1703497.6537075809,
+      "time_value_pv_at_opening_2024_usd": 21138772.540862963
+    }
+  ],
+  "historical_outside_vs_inside_concept_costs": {
+    "inside_total": 29196795,
+    "outside_total": 41800000,
+    "total_premium": 12603205,
+    "right_of_way_premium": 9694000,
+    "additional_parcels": 45,
+    "additional_construction_months": 12,
+    "currency_basis": "Historical March 2021 estimates in March 2022 concept package; not converted to 2024 dollars and not subtracted from the time-value PV.",
+    "illustrative_premium_per_net_tree_saved": {
+      "50": 252064.1,
+      "100": 126032.05,
+      "200": 63016.025,
+      "400": 31508.0125
+    },
+    "tree_count_qualification": "Counts are hypothetical net additional surviving trees across the whole corridor, after any outside tree losses, not a measured inventory or a prediction of survival.",
+    "gdot_reported_operations_safety_bcr": 2.98
+  },
+  "checks": {
+    "paired_demand_matches": true,
+    "all_compared_runs_complete": true,
+    "movement_and_all_trip_aggregation_match": true
+  }
+}
