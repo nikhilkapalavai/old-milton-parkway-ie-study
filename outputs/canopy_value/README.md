@@ -62,6 +62,16 @@ At an incremental cost of $10 million, net canopy value above approximately $4.5
 
 The full project budget cannot substitute for the incremental cost: bridges, sidewalks, rehabilitation and shared work must be treated consistently. This analysis is retrospective; costs already incurred require different treatment in a decision about changing the ongoing project.
 
+## Stress-testing the four-lane alternative
+
+I reran the retiming search across **5,280 candidate plans** and checked the selected plans on **800 holdout runs** using five independent arrival seeds. The grid varies synthetic side-street demand (50, 100, 300, 450 and 650 vehicles per hour per junction), main-road demand at the observed profile and at 20% higher, saturation flow (1,600 or 1,800 vehicles per hour per lane) and signal lost time (16 or 24 seconds). A four-lane plan passes only if it drains completely, stays at or below 1.0 peak v/c, keeps mean main-road delay at or below 120 seconds and side-street delay at or below 90 seconds, and stays within 30 seconds of the six-lane main-road result and 15 seconds of its side-street result.
+
+At the observed main-road profile with 1,800 saturation and 16 seconds of lost time, the holdout comparison passes at side demand of 50 and 100 vehicles per hour per junction. At 300, the AM case fails the side-street comparison; at 450, both AM and PM fail it, adding about **31 seconds** of side-street delay while reducing main-road delay by about **7-8 seconds**. The full grid has **16 passing cases out of 80**; no case at 20% higher main-road demand passes. At side demand 450, the selected four-lane plan itself has peak side v/c of about **1.04**, above the 1.0 screen.
+
+This is a screening result, not a proof that every possible four-lane signal plan fails. It does show that the earlier “four lanes nearly match six” statement is conditional: it holds for low side demand and favorable signal assumptions, then breaks as cross-street demand or future demand rises. The traffic test therefore cannot justify saying the canopy was clearly worth losing, and it cannot establish that four lanes could have met GDOT's 2047 design-year need. It supports a narrower conclusion: **traffic alone did not make canopy preservation impossible under the observed profile, but the four-lane option was not robust across plausible demand and operating conditions.**
+
+The stress-test output is [stress_test.json](stress_test.json), and the reproducible script is [stress_test.py](stress_test.py). The model remains an aggregate finite-storage queue model with synthetic side demand; it is not a calibrated microsimulation or a canopy appraisal.
+
 ## The documented outside-widening option
 
 The [GDOT concept report, PDF pp. 13-14](https://www.dot.ga.gov/_layouts/GDOT.SharePoint.CustomHttpHandlers/PWDocumentDownloadHandler.ashx?DocGUID=11d2e65d-2e90-4a1a-a0a8-e75ae818d78f&Filename=0017187_CR_MAR2022.pdf#page=14), lists inside widening at **$29,196,795** and outside widening at **$41.8 million**. The total premium is **$12,603,205**, including **$9,694,000** additional right-of-way cost. Outside widening affected 63 parcels versus 18 and took an estimated 42 months versus 30. These are historical concept estimates, not current bids or same-dollar inputs to the table above.

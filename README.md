@@ -8,7 +8,7 @@ The work is written as an exploratory, evidence-backed student project. It uses 
 
 **September 11 validation update:** Read the [evidence and model audit](outputs/validation/README.md) before citing results. It documents project-caused county water relocation, a corrected State Bridge Way signal location, two days of public lane counts, and 315 sensitivity runs. Count-unit processing remains unresolved; these runs are not field calibration. The earlier claim that retiming matched widening is not a supported real-world conclusion. The original simulation, PDF and website remain on the earlier V2 version.
 
-**September 12 decision review:** [Was the canopy worth losing?](outputs/canopy_value/README.md) aggregates delay across modeled trips, values time using USDOT parameters, and calculates the canopy/cost break-even thresholds. Widening's time benefit is potentially substantial, but the missing canopy appraisal and comparable four-lane cost prevent a definitive verdict. This is an illustrative economic screen, not a full benefit-cost analysis.
+**September 12 decision review:** [Was the canopy worth losing?](outputs/canopy_value/README.md) aggregates delay across modeled trips, values time using USDOT parameters, calculates the canopy/cost break-even thresholds, and stress-tests retimed four-lane plans across 80 demand and signal cases. Widening's time benefit is potentially substantial, but the missing canopy appraisal and comparable four-lane cost prevent a definitive verdict. This is an illustrative economic screen, not a full benefit-cost analysis.
 
 ## Interactive Website
 
