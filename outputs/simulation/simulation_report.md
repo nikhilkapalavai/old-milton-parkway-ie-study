@@ -1,5 +1,7 @@
 MAP-BASED QUEUE SIMULATION / RESEARCH VERSION 2
 
+**Historical V2 report.** Read the [September 11 evidence and model audit](../validation/README.md) before citing these results. The original inputs and numbers below are preserved for reproducibility; the later audit corrects signal geometry and qualifies the afternoon comparison.
+
 What if the median trees had stayed?
 
 Completed: 280 scenario runs using mapped corridor spacing and GDOT historical demand forecasts. Seven alternatives were tested across eight demand/operations profiles, with five arrival-pattern seeds each. Vehicle conservation, finite storage, zero demand, continuous green, and demand-scaling checks passed.

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://gdottrafficdata.drakewell.com/tfdaysreport.asp?node=GDOT_PORTABLES&cosit=0000121_0312&reportdate=2025-04-01&enddate=2025-04-30&dir=%2D3&dim1bin=2",
+  "retrieved": "2026-09-11",
+  "method": "Public rendered report, Class F2 selected, All directions rows",
+  "dates": ["2025-04-01", "2025-04-02"],
+  "F2_daily_totals": [46378, 46391],
+  "F2_15h_totals": [3370, 3099],
+  "interpretation": "Classification data are populated, which supports a vehicle-count interpretation. This does not establish what processing the station's volumeisaxles metadata controls. No conversion was inferred or applied. This check is evidence only and is not used as a new model input."
+}

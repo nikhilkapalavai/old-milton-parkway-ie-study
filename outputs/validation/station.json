@@ -1,0 +1,43 @@
+{
+  "id": "12EF6770-676A-4208-B876-46A231144112",
+  "node": "GDOT_PORTABLES",
+  "cosit": "0000121_0312",
+  "name": "121-0312",
+  "description": "RPX 400033L400034R",
+  "isDisabled": false,
+  "speedLimit": null,
+  "bearing": 90,
+  "location": {
+    "lat": 34.06397125,
+    "lng": -84.25179971
+  },
+  "parameters": {
+    "tz": "US/Eastern",
+    "hz": "US.GA",
+    "enableqc": "1",
+    "driveson": "r",
+    "duration": "temp",
+    "fipsstatecode": "13",
+    "volumeisaxles": "1",
+    "use": "temp",
+    "summaryinterval": "60m",
+    "routenumber": "00012000",
+    "lrssection": "1211012000",
+    "county": "FULTON",
+    "fc01": "14",
+    "fc": "3U",
+    "facilitytype": "2",
+    "roadlength": "2.5066692",
+    "begmp": "71.43",
+    "endmp": "73.37",
+    "funcclass": "3",
+    "urbanareatype": "LU",
+    "ownershipentity": "1",
+    "ownership": "1",
+    "countynumber": "121",
+    "district": "7",
+    "urbanareaname": "Atlanta",
+    "urbancode": "03817",
+    "roadsurface": "Paved"
+  }
+}

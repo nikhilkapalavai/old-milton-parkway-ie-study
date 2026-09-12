@@ -4,6 +4,8 @@ This repository contains an industrial engineering project studying GDOT Project
 
 The work is written as an exploratory, evidence-backed student project. It uses GDOT planning documents, OpenStreetMap corridor geometry, and a custom aggregate queue simulation to compare four-lane signal operations against six-lane widening scenarios. The model is intentionally transparent and reproducible, with assumptions stated directly in the report.
 
+**September 11 validation update:** Read the [evidence and model audit](outputs/validation/README.md) before citing results. It documents project-caused county water relocation, a corrected State Bridge Way signal location, two days of public lane counts, and 315 sensitivity runs. Count-unit processing remains unresolved; these runs are not field calibration. The earlier claim that retiming matched widening is not a supported real-world conclusion. The original simulation, PDF and website remain on the earlier V2 version.
+
 ## Interactive Website
 
 Explore the traffic study in the [Old Milton Traffic Lab](https://old-milton-traffic-lab.nick98976.chatgpt.site). Adjust road design, signal timing, and peak-hour demand; replay queues; compare alternatives; and inspect the tree and cost evidence.
@@ -12,7 +14,8 @@ Website source and setup instructions are in [website/](website/). The browser m
 
 ## Main Deliverables
 
-- `outputs/traffic_simulation_study.pdf` - final simulation report
+- `outputs/validation/` - latest evidence audit, corrected geometry and reproducible sensitivity tests
+- `outputs/traffic_simulation_study.pdf` - original V2 simulation report; read the later audit before citing
 - `outputs/old_milton_study.pdf` - earlier evidence review of the GDOT concept documents
 - `outputs/evidence_excerpt.pdf` - selected source pages from the GDOT documents
 - `outputs/project_plan.md` - project plan, research phases, and records-request draft

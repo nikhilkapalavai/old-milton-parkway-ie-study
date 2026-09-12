@@ -1,5 +1,7 @@
 # Old Milton Parkway traffic simulation
 
+**V2 archive:** The [September 11 audit](../validation/README.md) corrects the State Bridge Way location and retests the afternoon result using public count observations with explicit qualifications. This directory retains the original V2 inputs and results so the change can be reproduced; use `../validation/` for the updated analysis.
+
 Exploratory, uncalibrated aggregate queue model. Do not present outputs as measured Google Maps travel times or a validated prediction. Main report: ../traffic_simulation_study.pdf.
 
 Run with Python 3 (standard library only):

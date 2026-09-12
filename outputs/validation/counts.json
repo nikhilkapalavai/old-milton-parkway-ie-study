@@ -1,0 +1,22 @@
+{
+  "station": "121-0312",
+  "node": "GDOT_PORTABLES",
+  "cosit": "0000121_0312",
+  "retrieved": "2026-09-11",
+  "source_url": "https://gdottrafficdata.drakewell.com/tfdaysreport.asp?node=GDOT_PORTABLES&cosit=0000121_0312&reportdate=2025-04-01&enddate=2025-04-30&dir=%2D3",
+  "provenance": "Transcribed from the public report's rendered table. Each array has 24 hourly rows, starting at local midnight; each row contains April 1 and April 2 respectively. All-lane sums are checked against the separate All directions table.",
+  "dates": ["2025-04-01", "2025-04-02"],
+  "timezone": "America/New_York",
+  "unit": "reported hourly volume; vehicle/axle processing unresolved",
+  "unit_caveat": "Station metadata contains volumeisaxles=1. Vehicle-class filters exist, but this does not settle whether the displayed counts are axle-adjusted. The retest provisionally treats each reported unit as a modeled vehicle and is a sensitivity exercise, not calibration.",
+  "coverage": "Two complete days in the April report. April 3 has one incomplete zero at midnight; remaining entries through April 30 are missing. Missing/incomplete entries are excluded, never filled with zero.",
+  "direction_caveat": "Aggregate headings say Northbound/Southbound while individual lanes say Eastbound/Westbound. Direction shares here sum the explicitly named individual lanes; verify station orientation before engineering use.",
+  "daily_all_lane_totals": [55248, 55217],
+  "all_lanes": [[305,286],[121,166],[91,100],[103,111],[289,287],[825,817],[2332,2361],[3725,3649],[3857,3781],[3469,3588],[3097,2999],[3288,3231],[3368,3534],[3424,3452],[3624,3524],[3977,3728],[3631,3679],[3525,3487],[3589,3663],[3002,3031],[2268,2341],[1704,1759],[1009,1083],[625,560]],
+  "lanes": {
+    "Eastbound Slow": [[76,80],[31,51],[26,22],[20,24],[36,39],[114,108],[321,319],[630,601],[677,676],[628,662],[563,569],[697,701],[770,791],[809,777],[890,868],[1015,930],[962,904],[919,909],[918,959],[749,787],[554,605],[442,438],[271,262],[176,138]],
+    "Eastbound Fast": [[102,90],[37,45],[22,32],[24,19],[29,35],[134,138],[405,413],[754,738],[857,844],[843,805],[756,704],[833,805],[849,935],[948,913],[1024,992],[1119,1049],[913,911],[930,888],[1025,1087],[963,1007],[734,764],[561,581],[340,374],[182,193]],
+    "Westbound Slow": [[75,71],[33,43],[24,30],[31,47],[142,129],[297,295],[757,766],[1126,1118],[1148,1110],[1015,1042],[886,844],[904,857],[852,915],[831,859],[864,822],[925,859],[862,909],[823,853],[831,814],[666,632],[504,503],[365,378],[214,232],[144,134]],
+    "Westbound Fast": [[52,45],[20,27],[19,16],[28,21],[82,84],[280,276],[849,863],[1215,1192],[1175,1151],[983,1079],[892,882],[854,868],[897,893],[836,903],[846,842],[918,890],[894,955],[853,837],[815,803],[624,605],[476,469],[336,362],[184,215],[123,95]]
+  }
+}
