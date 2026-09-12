@@ -1,0 +1,11 @@
+{
+  "total_runs": 858,
+  "censored_runs_identified_and_excluded_from_success": 15,
+  "checks": [
+    "Mass balance in all saved runs",
+    "Equal offered main and side demand in fixed-plan pairs",
+    "Capacity frontier exhausts green-time budget",
+    "Headline plans complete and meet declared 30/30 screen"
+  ],
+  "engine_checks": "check_engine.py additionally passes seven legacy regressions, mirror symmetry, zero demand, sustained overload, conservation and storage assertions."
+}

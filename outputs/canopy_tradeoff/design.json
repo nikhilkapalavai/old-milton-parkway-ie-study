@@ -1,0 +1,29 @@
+{
+  "study": "Traffic-only four-lane canopy counterfactual",
+  "scope": "Assume retaining four lanes preserves the canopy; test traffic performance only. Canopy preservation is an input assumption, not a simulated finding.",
+  "registered_before_runs": "2026-09-12 UTC / September 11 local time",
+  "data": "GDOT station 121-0312, April 1 and 2 2025; provisional reported-unit-to-vehicle interpretation retained from the audit. Other link volumes inherit historical spatial ratios.",
+  "periods": {"AM": [6, 7, 8, 9], "PM": [14, 15, 16, 17, 18, 19]},
+  "training": "Select each road size's AM and PM plan using April 1, seed 0, nominal saturation 1800 and side demand 450. Freeze those plans for April 2 and all stress cases. This is a held-out input-day check, not validation against measured delays.",
+  "cycles_seconds": [90, 120, 150],
+  "main_green_fractions": [0.55, 0.60, 0.65, 0.70, 0.75],
+  "offset_patterns": ["west", "east", "simultaneous"],
+  "minimum_side_green_seconds": 20,
+  "lost_seconds": 16,
+  "progression_speed_mph": 40,
+  "selection": "Among candidates with peak hourly movement v/c <= 1, side mean delay <= 90 seconds and full drainage, minimize all-trip mean queue delay. If none qualify, report no qualifying candidate; retain the minimum-delay candidate only as a labelled diagnostic.",
+  "holdout_seeds": [10, 11, 12, 13, 14],
+  "comparison_screen": {
+    "description": "Illustrative research thresholds, not engineering approval or official standards. Evaluate seed-mean results and report individual-seed variation separately.",
+    "maximum_four_lane_main_delay_seconds": 120,
+    "maximum_four_lane_side_delay_seconds": 90,
+    "maximum_added_main_delay_seconds": 30,
+    "maximum_added_side_delay_seconds": 15,
+    "maximum_exit_fraction_loss": 0.02,
+    "maximum_peak_hourly_volume_capacity_ratio": 1.0,
+    "full_drainage_required": true,
+    "alternate_added_main_delay_limits_seconds": [15, 30, 60]
+  },
+  "uncertainties": "Saturation 1600/1800; side demand 450/650; main and side growth 10/20/30 percent; 35 mph travel against frozen 40 mph offsets; +15 percent volume on unobserved links; 10/20 percent main-demand reduction under combined stress. These are scenarios, not forecasts, probabilities or predicted program effects.",
+  "analytical_envelope": "Independently compute the necessary green-time budget using capacity = lane-group saturation * effective green / cycle. Evaluate v/c targets of 1.0 and 0.9. This ignores turning phases, storage losses and pedestrian constraints, so it is an optimistic upper bound, not proof of sufficiency."
+}

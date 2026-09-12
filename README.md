@@ -4,6 +4,8 @@ This repository contains an industrial engineering project studying GDOT Project
 
 The work is written as an exploratory, evidence-backed student project. It uses GDOT planning documents, OpenStreetMap corridor geometry, and a custom aggregate queue simulation to compare four-lane signal operations against six-lane widening scenarios. The model is intentionally transparent and reproducible, with assumptions stated directly in the report.
 
+**Latest traffic-only study:** The [canopy tradeoff study](outputs/canopy_tradeoff/README.md) tests longer traffic periods and alternative signal plans across 858 runs. Assuming four lanes preserve the canopy, one candidate added approximately 8 seconds of modeled morning main-road delay, 5 seconds in the afternoon, and 17 seconds on cross streets compared with selected six-lane plans. The study documents limited capacity for demand growth and tests retiming with demand-reduction targets. These are conditional simulation results, not validated road performance. The website remains on the earlier model.
+
 **September 11 validation update:** Read the [evidence and model audit](outputs/validation/README.md) before citing results. It documents project-caused county water relocation, a corrected State Bridge Way signal location, two days of public lane counts, and 315 sensitivity runs. Count-unit processing remains unresolved; these runs are not field calibration. The earlier claim that retiming matched widening is not a supported real-world conclusion. The original simulation, PDF and website remain on the earlier V2 version.
 
 ## Interactive Website
@@ -14,6 +16,7 @@ Website source and setup instructions are in [website/](website/). The browser m
 
 ## Main Deliverables
 
+- `outputs/canopy_tradeoff/` - latest traffic-only study, competing delay objectives, capacity bounds and complete experiment outputs
 - `outputs/validation/` - latest evidence audit, corrected geometry and reproducible sensitivity tests
 - `outputs/traffic_simulation_study.pdf` - original V2 simulation report; read the later audit before citing
 - `outputs/old_milton_study.pdf` - earlier evidence review of the GDOT concept documents

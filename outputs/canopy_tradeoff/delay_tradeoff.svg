@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="820" height="430" preserveAspectRatio="xMinYMin meet" viewBox="0 0 820 430" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="820" height="430"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-430)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="820" height="430" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,98%,96%); fill-rule: evenodd;"/>
+			<text x="38" y="393" style="font-family: Helvetica-Bold; font-size: 19px;fill: rgb(9%,20%,18%); stroke:none;" transform="translate(0,786) scale(1,-1)">Four lanes can come close, with a cost to side streets</text>
+			<text x="38" y="367" style="font-family: Times-Roman; font-size: 11px;fill: rgb(9%,20%,18%); stroke:none;" transform="translate(0,734) scale(1,-1)">Average modeled queue delay • April 2 inputs • five arrival-pattern seeds</text>
+			<g transform="">
+				<path d="M 70,100 L 760,100 Z" style="stroke: rgb(86%,89%,87%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 70,153.75 L 760,153.75 Z" style="stroke: rgb(86%,89%,87%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 70,207.5 L 760,207.5 Z" style="stroke: rgb(86%,89%,87%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 70,261.25 L 760,261.25 Z" style="stroke: rgb(86%,89%,87%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 70,315 L 760,315 Z" style="stroke: rgb(86%,89%,87%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<g transform="">
+					<rect x="87.25" y="100.0" width="69.0" height="161.9740484699123" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,47%,38%); fill-rule: evenodd;"/>
+					<rect x="259.75" y="100.0" width="69.0" height="175.2657446671916" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,47%,38%); fill-rule: evenodd;"/>
+					<rect x="432.25" y="100.0" width="69.0" height="170.70090417408863" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,47%,38%); fill-rule: evenodd;"/>
+					<rect x="604.75" y="100.0" width="69.0" height="170.72199373972524" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,47%,38%); fill-rule: evenodd;"/>
+					<rect x="156.25" y="100.0" width="69.0" height="132.81800179744715" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(27%,40%,66%); fill-rule: evenodd;"/>
+					<rect x="328.75" y="100.0" width="69.0" height="156.80820205282373" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(27%,40%,66%); fill-rule: evenodd;"/>
+					<rect x="501.25" y="100.0" width="69.0" height="111.60217673046168" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(27%,40%,66%); fill-rule: evenodd;"/>
+					<rect x="673.75" y="100.0" width="69.0" height="111.58471385370683" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(27%,40%,66%); fill-rule: evenodd;"/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,121.75,267.974048)">
+							<text x="-8.75" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">45.2</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,294.25,281.265745)">
+							<text x="-8.75" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">48.9</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,466.75,276.700904)">
+							<text x="-8.75" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">47.6</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,639.25,276.721994)">
+							<text x="-8.75" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">47.6</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,190.75,238.818002)">
+							<text x="-8.75" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">37.1</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,363.25,262.808202)">
+							<text x="-8.75" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">43.8</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,535.75,217.602177)">
+							<text x="-8.75" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">31.1</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,708.25,217.584714)">
+							<text x="-8.75" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">31.1</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 70,100 L 760,100 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<path d="M 70,100 L 70,95 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 242.5,100 L 242.5,95 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 415,100 L 415,95 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 587.5,100 L 587.5,95 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 760,100 L 760,95 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,156.25,95)">
+							<text x="-32.384" y="-11.0" style="font-family: Times-Roman; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-22) scale(1,-1)">AM main road</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,328.75,95)">
+							<text x="-31.471000000000004" y="-11.0" style="font-family: Times-Roman; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-22) scale(1,-1)">PM main road</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,501.25,95)">
+							<text x="-36.9655" y="-11.0" style="font-family: Times-Roman; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-22) scale(1,-1)">AM cross streets</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,673.75,95)">
+							<text x="-36.052499999999995" y="-11.0" style="font-family: Times-Roman; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-22) scale(1,-1)">PM cross streets</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 70,100 L 70,315 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<path d="M 70,100 L 65,100 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 70,153.75 L 65,153.75 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 70,207.5 L 65,207.5 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 70,261.25 L 65,261.25 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 70,315 L 65,315 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,65,100)">
+							<text x="-5.0" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">0</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,65,153.75)">
+							<text x="-10.0" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">15</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,65,207.5)">
+							<text x="-10.0" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">30</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,65,261.25)">
+							<text x="-10.0" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">45</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,65,315)">
+							<text x="-10.0" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">60</text>
+						</g>
+					</g>
+				</g>
+			</g>
+			<text x="70" y="331" style="font-family: Times-Roman; font-size: 11px;fill: rgb(9%,20%,18%); stroke:none;" transform="translate(0,662) scale(1,-1)">Seconds per modeled trip</text>
+			<rect x="510" y="329" width="10" height="10" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,47%,38%); fill-rule: evenodd;"/>
+			<text x="525" y="329" style="font-family: Times-Roman; font-size: 11px;fill: rgb(9%,20%,18%); stroke:none;" transform="translate(0,658) scale(1,-1)">Four lanes</text>
+			<rect x="625" y="329" width="10" height="10" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(27%,40%,66%); fill-rule: evenodd;"/>
+			<text x="640" y="329" style="font-family: Times-Roman; font-size: 11px;fill: rgb(9%,20%,18%); stroke:none;" transform="translate(0,658) scale(1,-1)">Six lanes</text>
+			<text x="38" y="50" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,20%,18%); stroke:none;" transform="translate(0,100) scale(1,-1)">Assumes four lanes preserve the canopy. Counts provisionally treated as vehicles.</text>
+			<text x="38" y="31" style="font-family: Times-Roman; font-size: 10px;fill: rgb(9%,20%,18%); stroke:none;" transform="translate(0,62) scale(1,-1)">Exploratory model comparison; not measured road performance. Sources and full assumptions: README.md.</text>
+		</g>
+	</g>
+</svg>

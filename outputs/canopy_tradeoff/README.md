@@ -1,0 +1,120 @@
+# Could four lanes preserve the canopy? A traffic-only study
+
+Completed September 11, 2026 local time (September 12 UTC).
+
+**Conditional finding: a four-lane alternative performed close to six lanes under the nominal assumptions, with additional delay mainly on cross streets. It had limited room for higher demand or lower discharge capacity.** This study assumes that retaining four lanes preserves the canopy. It evaluates the traffic tradeoff; it does not establish actual tree survival or a construction alternative.
+
+The study contains **858 simulation runs**, an independent capacity calculation, and a documented comparison of competing objectives. All figures below are modeled queue delay, not measured travel time or predictions of current road performance.
+
+## A concrete four-lane candidate
+
+One relatively balanced candidate uses a 120-second cycle, 84 seconds of effective main-road green and 20 seconds for the simplified cross-street phase, with 16 seconds lost per cycle. Progression favors westbound traffic in the morning and eastbound traffic in the afternoon. These are hypothetical model settings, not a field signal-timing plan.
+
+The six-lane comparator was selected from the same candidate grid by minimizing total modeled trip delay on April 1 inputs. It uses a 90-second cycle, 54 seconds of main-road green and 20 seconds of cross-street green, with the same directional progression choices. Both road sizes receive an opportunity to change their timing.
+
+On April 2 inputs, averaging five arrival-pattern seeds:
+
+| Modeled movement | Four lanes: seconds/trip | Six lanes: seconds/trip | Added delay with four lanes |
+| --- | ---: | ---: | ---: |
+| AM main road | 45.2 | 37.1 | +8.1 |
+| AM cross streets | 47.6 | 31.1 | +16.5 |
+| PM main road | 48.9 | 43.8 | +5.2 |
+| PM cross streets | 47.6 | 31.1 | +16.5 |
+
+![Modeled delay comparison](delay_tradeoff.svg)
+
+The four-lane candidate gives cross streets the same 20 seconds of green less often: every 120 seconds rather than every 90. This explains why main-road performance can be close while cross-street waiting increases. Weighted mean delay across all modeled trips is 46.4 versus 34.3 seconds in the morning and 48.4 versus 38.4 in the afternoon.
+
+The averages also hide directional differences. Morning eastbound delay is about 94.2 seconds with four lanes versus 77.8 with six; morning westbound is 15.4 versus 12.3. The model's progression favors the busier direction, rather than making both directions equally fast.
+
+This candidate also had similar four-lane performance on April 1: approximately 46.5 seconds of morning main-road delay and 49.3 seconds in the afternoon. Those figures are from one training seed, not a population estimate.
+
+## What counts as close enough?
+
+The initial research screen allowed at most 30 additional seconds of main-road delay and 15 additional seconds on cross streets, with absolute mean delays no greater than 120 and 90 seconds respectively, no loss greater than two percentage points in the main-road exit fraction, no peak hourly movement above modeled capacity, and full drainage. These thresholds were chosen for comparison; they are not official approval criteria.
+
+No eligible four-lane candidate met that strict cross-street allowance on the second day. In an explicitly exploratory sensitivity check allowing **30 additional seconds on both main road and cross streets**, 2 morning and 6 afternoon candidates met the full screen. The candidate shown above is one of them. Whether roughly 17 extra seconds on cross streets is worth preserving canopy is a value judgment the traffic model cannot make.
+
+The nominal all-trip-delay winner was a different four-lane plan: a 150-second cycle and 112 seconds of main-road green. It slightly outperformed the selected six-lane plan on main-road delay while adding about 31 seconds on cross streets. Presenting only main-road delay would conceal that cost. The shorter-cycle candidate above illustrates another balance.
+
+## Where the four-lane alternative becomes fragile
+
+The study held the originally selected plans fixed while testing growth and operating uncertainty. It then performed a separate retiming search for changed conditions, so failure of a fixed plan would not automatically be called failure of every four-lane option.
+
+Under nominal saturation flow of 1,800 per lane per hour and synthetic cross-street demand of 450 per junction per hour, the two-phase green-time budget allows at most about **11% AM or 13% PM common growth** before the largest observed-pattern peak would exceed capacity, even after continuous green reallocation within a 150-second cycle. These are optimistic bounds within the stated cycle limit, not dated forecasts or measured road capacities.
+
+The relationship is based on the standard capacity equation in [FHWA's archived Signal Timing Manual, Chapter 3](https://ops.fhwa.dot.gov/publications/fhwahop08024/chapter3.htm):
+
+`capacity = number of lanes × saturation flow per lane × effective green / cycle`
+
+For the simplified two-phase model, a necessary condition is:
+
+`critical main demand / (main lanes × saturation) + side demand / (2 × saturation) <= 1 - lost time / cycle`
+
+The independently derived common-growth bound divides the right side by the sum of the two demand ratios. It ignores storage interference, additional turning phases and pedestrian timing, so satisfying it cannot establish feasibility. Exceeding it means the modeled critical peak hour would accumulate a queue; a later lower-demand hour can still clear that queue.
+
+The strongest modeled AM flow occurs at 7 a.m., in the westbound North Point–Cotton Creek link: approximately 2,450 per hour. The PM critical flow is approximately 2,389 eastbound at 3 p.m. between Park Bridge and Parkview. These are inferred link flows using historical spatial ratios; neither location was independently counted in this study. They illustrate why the busiest total-count hour and the limiting directional flow need not be the same.
+
+At a 0.90 volume/capacity target, the nominal AM four-lane green-time budget already has essentially no growth margin. At the lower saturation assumption of 1,600 and cross-street demand of 650, avoiding peak-hour oversaturation requires roughly a 10% AM or 8% PM main-demand reduction in the continuous calculation; keeping 10% capacity headroom requires roughly 22% AM or 20% PM. These are conditional target calculations, not evidence that such reductions can be achieved.
+
+## Can retiming plus demand reduction help?
+
+The retiming extension selected a plan using April 1 inputs separately for each changed-condition case, then applied that plan to April 2. The table gives mean **main-road / cross-street seconds of queue delay per trip**. A missing four-lane entry means none of the tested plans met the training capacity and side-delay criteria; it is not a proof that all possible signal designs fail.
+
+| Scenario ID | Period | Four lanes, retimed | Six lanes, retimed |
+| --- | --- | ---: | ---: |
+| growth20 | AM | No qualifying plan in grid | 41.2 / 32.1 |
+| growth20 | PM | No qualifying plan in grid | 47.2 / 32.1 |
+| combined_stress | AM | No qualifying plan in grid | 39.7 / 34.7 |
+| combined_stress | PM | No qualifying plan in grid | 45.7 / 34.6 |
+| combined_stress_reduce10 | AM | No qualifying plan in grid | 37.3 / 34.7 |
+| combined_stress_reduce10 | PM | No qualifying plan in grid | 43.9 / 34.6 |
+| combined_stress_reduce20 | AM | 50.4 / 47.3 | 34.9 / 34.7 |
+| combined_stress_reduce20 | PM | 51.3 / 34.6 | 42.4 / 34.6 |
+| growth20_reduce20 | AM | 43.6 / 49.3 | 36.2 / 32.1 |
+| growth20_reduce20 | PM | 47.1 / 49.2 | 43.2 / 32.1 |
+
+Scenario definitions:
+
+- `growth20`: both main-road and synthetic side demand increased 20%.
+- `combined_stress`: saturation lowered to 1,600 and side demand raised to 650 per junction per hour.
+- `combined_stress_reduce10/20`: that same stress case with 10% or 20% fewer main-road arrivals throughout the modeled windows; side demand remains 650.
+- `growth20_reduce20`: after 20% growth, reduce main-road arrivals by 20%, leaving them at 96% of the original level; side demand remains 20% higher.
+
+**A 20% reduction combined with retiming produced qualifying four-lane plans in the tested combined-stress case.** Simply reducing main demand while retaining the original long main-road green did not solve cross-street overload. The signal plan has to respond to the changed balance of demand.
+
+The reduction is an input target, not a demonstrated transportation program. Removed trips are not reassigned to other hours or routes, so this is not a simulation of staggered schedules that preserves daily trip totals. Vehicle-trip consolidation, trip avoidance or time shifting would need their own behavioral and network analysis before being credited with this effect.
+
+## How the experiment was run
+
+The [design file](design.json) was saved before the initial runs. Morning profiles cover 6–10 a.m.; afternoon profiles cover 2–8 p.m. Hourly direction totals come from the four explicitly named lanes in [GDOT's April 2025 report](https://gdottrafficdata.drakewell.com/tfdaysreport.asp?node=GDOT_PORTABLES&cosit=0000121_0312&reportdate=2025-04-01&enddate=2025-04-30&dir=%2D3). Queues carry across hour boundaries, followed by up to two hours of drainage.
+
+The grid contains 33 plans for each road size: 90/120/150-second cycles, selected main-green fractions subject to at least 20 seconds of side green, and eastbound/westbound/simultaneous offsets. The initial 132 training runs use April 1, seed 0; 260 runs use April 2 and seeds 10–14 with frozen selected plans across 13 conditions. The exploratory extension adds 90 alternative-plan runs, 306 case-specific training runs and 70 second-day runs. The added search includes all 9 nominal training-eligible four-lane plans per period.
+
+The balanced candidate in the first table was selected for presentation after examining the exploratory second-day tradeoff results. Its reported second-day performance is therefore not an untouched final test. It is also not field validation: no observed delays or queue lengths were available. Calibration requires comparison with measured system performance, as discussed in [FHWA's 2019 calibration guidance](https://ops.fhwa.dot.gov/publications/fhwahop18036/chapter5.htm).
+
+## Limits that matter to the result
+
+- Only two complete observation days at one station are available. The station's `volumeisaxles` metadata remains unresolved; the runs provisionally treat each displayed report unit as a vehicle. Classified data are populated, but processing has not been independently confirmed.
+- Observed flow need not equal unmet traffic demand. A count can miss vehicles held upstream or choosing other routes. Other links inherit the historical forecast's spatial ratios, with a separate +15% stress test on unobserved links.
+- Signal phases, side-street volumes, saturation rates and existing queues are assumed. Both periods start with empty networks. Longer runs prevent hourly queue resets, but do not establish the real starting queue.
+- Side streets are modeled as separate two-lane approaches at every junction. Their queues cannot block the main road. Turning movements are approximated by net changes in link flow, not observed turning matrices; inferred continuation ratios change by hour, without individual trip routes.
+- Delays are per entering modeled trip, including partial-corridor trips, not full-length commute times. Five seeds describe synthetic arrival variation only; their narrow ranges are not uncertainty intervals for the road.
+- Fifteen fixed-plan stress runs still contained vehicles at the drain cutoff. Their total-delay statistics are incomplete lower bounds and were excluded from successful comparisons. No such censored run supports the headline candidate.
+- The model has no measure of canopy area, tree survival, pedestrian performance, emissions, crashes or program cost. This study's scope is the conditional traffic tradeoff.
+
+## Reproduce and inspect
+
+```powershell
+python outputs/canopy_tradeoff/check_engine.py
+python outputs/canopy_tradeoff/run_study.py
+python outputs/canopy_tradeoff/extend_tradeoffs.py
+python outputs/canopy_tradeoff/check_results.py
+python outputs/canopy_tradeoff/build_report.py
+```
+
+Simulation and checks use the Python standard library. Report/chart generation additionally uses ReportLab. The vector figure is [delay_tradeoff.svg](delay_tradeoff.svg). Full outputs are [results.json](results.json) and [tradeoffs.json](tradeoffs.json); the earlier evidence audit is [here](../validation/README.md). The original website remains on its earlier model and does not yet implement this study.
+
+Checks cover seven one-hour legacy regressions, directional mirror symmetry, zero demand, sustained overload, vehicle conservation, finite storage, identical offered demand for paired road-size comparisons, capacity-bound algebra and consistent report extraction. See [checks.json](checks.json).
+
+**Decision supported by this study:** retain the four-lane option as a candidate for field evaluation, with explicit tolerance for additional cross-street delay and a plan for peak demand. The model does not justify declaring canopy removal necessary, or declaring the four-lane alternative proven on the actual corridor.

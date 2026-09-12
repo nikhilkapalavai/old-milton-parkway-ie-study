@@ -2,6 +2,8 @@
 
 Audit date: September 11, 2026. Research notes, not an admissions essay.
 
+Later work: the [traffic-only canopy study](../canopy_tradeoff/README.md) extends these observations into multi-hour experiments, explores alternative signal plans and tests demand-growth limits. The evidence findings and historical audit below are preserved.
+
 The evidence supports road-project-caused relocation of Fulton County water facilities. It does **not** establish that an independent utility project required all the median trees to be cleared regardless of widening. The traffic retest still finds potential benefits from hypothetical signal changes, but does not establish that four lanes could replace widening or preserve the trees.
 
 ## 1. What caused the utility relocation?
