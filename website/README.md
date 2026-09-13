@@ -2,6 +2,8 @@
 
 An interactive industrial engineering study by Nikhil Kapalavai, prepared with AI assistance. Visitors can change lane configuration, signal green time, coordination, and offered demand; replay aggregate queues at seven junctions; compare alternatives; and inspect the tree, property, and cost evidence.
 
+Public website: https://nikhilkapalavai.github.io/old-milton-parkway-ie-study/
+
 This is an **uncalibrated screening experiment**, not live traffic, a Google Maps traffic feed, or an official engineering recommendation. No tree-preservation count is inferred. The website carries the original study's limitations alongside the results.
 
 ## Run locally
@@ -10,16 +12,17 @@ Requires Node.js 22.13 or later and npm.
 
 ```sh
 npm ci
-npm run dev
+npm run build:pages
+npm run preview:pages
 ```
 
 ```sh
 node --experimental-strip-types lib/verify-model.mjs
 npx tsc --noEmit
-npm run build
+npm run build:pages
 ```
 
-The verification command uses Node's built-in TypeScript stripping. Node 24 is also supported.
+The verification command uses Node's built-in TypeScript stripping. Node 24 is also supported. Open the preview URL printed by Vite, including `/old-milton-parkway-ie-study/`.
 
 ## Model and data
 
@@ -47,4 +50,10 @@ A production-preview browser regression check reproduces the published build: th
 
 ## Deployment
 
-Built with the Sites starter using React, Vinext, and the supplied Shadcn/Base UI primitives. The `.openai/hosting.json` file contains the public project identifier only. Credentials and local runtime state are excluded from Git. Reports are served from `public/reports`.
+GitHub Pages is the public hosting provider. The workflow in `../.github/workflows/pages.yml` installs the locked dependencies, checks TypeScript and the browser model, builds static assets, and deploys them when website changes are pushed to `main`. It can also be run manually from GitHub Actions.
+
+`vite.pages.config.ts` builds `index.html` and `main.tsx` into `dist/pages`. It mounts the existing React interface without a server and sets the repository's URL prefix for JavaScript, styles, the simulation worker, the favicon, and report links. Reports are copied from `public/reports`. The site needs no API keys or login, and the deployment workflow uses GitHub's short-lived built-in token.
+
+The playground still uses the original forecast-based simulation. Its study-version notice links to the later traffic study and the 6,080-run stress test/economic analysis on GitHub, so readers can check the updated findings before citing results.
+
+The original Sites starter configuration remains available through `npm run dev` and `npm run build`; GitHub Pages uses `build:pages`. The `.openai/hosting.json` file contains the original public project identifier only. Credentials and local runtime state are excluded from Git.

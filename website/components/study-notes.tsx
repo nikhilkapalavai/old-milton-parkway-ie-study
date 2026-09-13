@@ -61,7 +61,7 @@ export function TreesAndTradeoffs({
             utility layouts, and an arborist’s root-zone assessment. This
             traffic model cannot calculate a preservation count.
           </p>
-          <a href="/reports/gdot-evidence.pdf" target="_blank" rel="noreferrer">
+          <a href={`${import.meta.env.BASE_URL}reports/gdot-evidence.pdf`} target="_blank" rel="noreferrer">
             Read the source excerpts <ArrowUpRight size={15} />
           </a>
         </article>
@@ -318,7 +318,7 @@ export function ModelNotes() {
       <div className="resource-grid">
         <a
           className="panel resource"
-          href="/reports/traffic-study.pdf"
+          href={`${import.meta.env.BASE_URL}reports/traffic-study.pdf`}
           target="_blank"
           rel="noreferrer"
         >

@@ -12,9 +12,9 @@ The work is written as an exploratory, evidence-backed student project. It uses 
 
 ## Interactive Website
 
-Explore the traffic study in the [Old Milton Traffic Lab](https://old-milton-traffic-lab.nick98976.chatgpt.site). Adjust road design, signal timing, and peak-hour demand; replay queues; compare alternatives; and inspect the tree and cost evidence.
+Explore the traffic study in the public [Old Milton Traffic Lab](https://nikhilkapalavai.github.io/old-milton-parkway-ie-study/). Adjust road design, signal timing, and peak-hour demand; replay queues; compare alternatives; and inspect the tree and cost evidence.
 
-Website source and setup instructions are in [website/](website/). The browser model reproduces all 280 published Python runs. It uses historical forecasts and assumed operations, not live traffic. Hosted access is currently limited to the owner.
+Website source and setup instructions are in [website/](website/). The browser model reproduces all 280 original published Python runs. It uses historical forecasts and assumed operations, not live traffic. GitHub Pages serves the site without requiring a login. A notice links visitors to the later traffic study, stress test, and economic analysis; those later experiments have not been ported into the playground.
 
 ## Main Deliverables
 

@@ -350,7 +350,7 @@ export default function TrafficLab() {
         Skip to the traffic lab
       </a>
       <header className="site-header">
-        <a className="brand" href="/">
+        <a className="brand" href={import.meta.env.BASE_URL}>
           <span className="brand-mark">
             <Route size={25} />
           </span>
@@ -386,6 +386,17 @@ export default function TrafficLab() {
             <span /> EXPLORATORY MODEL
           </span>
         </div>
+        <aside className="study-update" aria-label="Study version">
+          This playground uses the original forecast-based model. Read the{' '}
+          <a href={`${GITHUB}/tree/main/outputs/canopy_tradeoff`} target="_blank" rel="noreferrer">
+            updated traffic study
+          </a>{' '}
+          and{' '}
+          <a href={`${GITHUB}/tree/main/outputs/canopy_value`} target="_blank" rel="noreferrer">
+            6,080-run stress test and cost analysis
+          </a>{' '}
+          before citing results. All results are exploratory simulations.
+        </aside>
         <Tabs value={tab} onValueChange={(v) => setTab(String(v))}>
           <TabsList variant="line" className="lab-tabs">
             <TabsTrigger value="playground">
@@ -761,7 +772,7 @@ export default function TrafficLab() {
           >
             Model & sources
           </button>
-          <a href="/reports/traffic-study.pdf" target="_blank" rel="noreferrer">
+          <a href={`${import.meta.env.BASE_URL}reports/traffic-study.pdf`} target="_blank" rel="noreferrer">
             Read the report <ArrowUpRight size={13} />
           </a>
         </div>
